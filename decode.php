@@ -49,7 +49,7 @@ class Decrypt {
             $c = ($a - pow($key1, 2) - $key2);
 
             while ($c < 0) {
-                $c += 26;
+                $c += 27;
             }
             return $c;
         }
