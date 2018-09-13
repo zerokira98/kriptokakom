@@ -33,8 +33,8 @@ function upcheck($string) {
 	}
 	return false;
 }
-$key1 = $_POST['key1'];
-$key2 = $_POST['key2'];
+$key1 = strtolower($_POST['key1']);
+$key2 = strtolower($_POST['key2']);
 $key1Arr = str_split($key1);
 $key2Arr = str_split($key2);
 
@@ -50,7 +50,6 @@ function encodeing($key1Arr,$key2Arr,$plaintArrFix,$kata){
       $valueEncy = aritmatic($sepPlan, $keyint1, $keyint2);
                 if ($valueEncy == -1) {
                     $chiperTextArray[$i] = "_";
-
                 }
                 else {
                     $chiperTextArray[$i] = $kata[$valueEncy];
@@ -58,7 +57,6 @@ function encodeing($key1Arr,$key2Arr,$plaintArrFix,$kata){
                 $i++;
     }
     foreach ($chiperTextArray as $key ) {
-      // code...
       echo "".$key;
     }
 }

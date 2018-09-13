@@ -4,6 +4,7 @@ class Decrypt {
     public $key1;
     public $key2;
     public $kata = array(" ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z");
+
     function insertData($data,$key1,$key2){
       $this->plaintArr = $data;
       $this->key1 = $key1;
@@ -69,8 +70,8 @@ class Decrypt {
 
 }
 $plain = str_split($_POST['plain']);
-$key1 = str_split($_POST['key1']);
-$key2 = str_split($_POST['key2']);
+$key1 = str_split(strtolower($_POST['key1']));
+$key2 = str_split(strtolower($_POST['key2']));
 $new = new Decrypt();
 $new->insertData($plain, $key1, $key2);
 $new->decrypting();
