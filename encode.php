@@ -46,7 +46,7 @@ function encodeing($key1Arr,$key2Arr,$plaintArrFix,$kata){
     // code...
       $sepPlan = charToInt($key, $kata);
       $keyint1 = charToInt($key1Arr[$i%(count($key1Arr))], $kata);
-      $keyint2 = charToInt($key2Arr[$i%(count($key1Arr))], $kata);
+      $keyint2 = charToInt($key2Arr[$i%(count($key2Arr))], $kata);
       $valueEncy = aritmatic($sepPlan, $keyint1, $keyint2);
                 if ($valueEncy == -1) {
                     $chiperTextArray[$i] = "_";
