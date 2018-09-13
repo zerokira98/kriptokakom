@@ -56,7 +56,7 @@ class Decrypt {
     }
     public function charToInt( $a) {
         $y = -1;
-        for ($x =0 ;$x <26;$x++) {
+        for ($x =0 ;$x <27;$x++) {
               if ($this->kata[$x]==$a) {
                   $y = $x;
               }
