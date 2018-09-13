@@ -29,7 +29,7 @@
     <div class="container" id="nu1">
       <div class="row card-panel">
         <div class="col s12 card-panel">
-          <h3>Enkripsi chiper</h3>
+          <h3>Enkripsi</h3>
         </div>
         <form class="col s12">
           <div class="row">
@@ -61,7 +61,7 @@
     <div class="container" id="nu2">
       <div class="row card-panel">
         <div class="col s12 card-panel">
-          <h3>Dekripsi chiper</h3>
+          <h3>Dekripsi</h3>
         </div>
         <form class="col s12">
           <div class="row">

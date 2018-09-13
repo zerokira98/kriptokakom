@@ -26,7 +26,6 @@ class Decrypt {
         $keyint1 = $this->charToInt($this->key1[$i%(count($this->key1))]);
         $keyint2 = $this->charToInt($this->key2[$i%(count($this->key2))]);
         $valueEncy = $this->aritmatic($sepChi, $keyint1, $keyint2);
-
                     if ($valueEncy == -1) {
                         $plantTextArray[$n - 1] = strtoupper($plantTextArray[$n - 1]);
                         $n--;
@@ -70,8 +69,8 @@ class Decrypt {
 
 }
 $plain = str_split($_POST['plain']);
-$key1 = str_split(strtolower($_POST['key1']));
-$key2 = str_split(strtolower($_POST['key2']));
+$key1 = str_split($_POST['key1']);
+$key2 = str_split($_POST['key2']);
 $new = new Decrypt();
 $new->insertData($plain, $key1, $key2);
 $new->decrypting();
