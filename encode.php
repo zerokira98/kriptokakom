@@ -4,8 +4,6 @@ $kata = array(" ", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "
 
 $plaintArr = str_split($_POST['plain']);
 
-$plaintArrlength = count($arr1);
-
 $plaintArrFix = stringtoarray($plaintArr);
 
 $key1 = $_POST['key1'];
@@ -63,7 +61,7 @@ function encodeing($key1Arr,$key2Arr,$plaintArrFix,$kata){
 function charToInt($a, $kata) {
 // -1 if "_"
         $y = -1;
-        for ( $x = 0; $x < 26; $x++) {
+        for ( $x = 0; $x < 27; $x++) {
             if ($kata[$x]==$a) {
                 $y = $x;
             }
@@ -74,7 +72,7 @@ function charToInt($a, $kata) {
         if ($a == -1) {
             return -1;
         } else {
-             $c = ($a + pow($key1, 2) + $key2) % 26;
+             $c = ($a + pow($key1, 2) + $key2) % 27;
             return $c;
         }
     }
